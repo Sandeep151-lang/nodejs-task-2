@@ -10,7 +10,7 @@ router.post('/createRooms', async (req, res) => {
         await room.save()
         res.status(200).send({ Room: room })
     } catch (error) {
-        return res.status(400).json('Error')
+        return res.status(400).json('Room Name unique')
     }
 })
 
